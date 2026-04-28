@@ -67,10 +67,10 @@ export default function Header() {
             <div className="flex-shrink-0">
               <a href="/" className="flex items-center group">
                 <div className="relative overflow-hidden rounded-lg">
-                  <img 
-                    src="/logo1.jpeg" 
-                    alt="JSTL Logo" 
-                    className="h-10 sm:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
+                  <img
+                    src="/logo3.jpg"
+                    alt="JSTL Logo"
+                    className="h-10 sm:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </a>
@@ -85,8 +85,8 @@ export default function Header() {
                   onClick={(e) => handleScroll(e, item.href)}
                   className={cn(
                     "text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 relative group",
-                    activeSection === item.href 
-                      ? "text-accent" 
+                    activeSection === item.href
+                      ? "text-accent"
                       : "text-foreground/80 hover:text-accent"
                   )}
                 >
@@ -148,8 +148,8 @@ export default function Header() {
                 </a>
               ))}
               <div className="flex flex-col gap-3 px-4 pt-4">
-                <Button 
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full shadow-lg shadow-accent/20" 
+                <Button
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full shadow-lg shadow-accent/20"
                   onClick={() => setIsDealerModalOpen(true)}
                 >
                   Become a Dealer
