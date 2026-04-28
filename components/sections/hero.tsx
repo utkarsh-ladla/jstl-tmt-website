@@ -33,7 +33,7 @@ export default function Hero() {
               <h2 className="text-sm md:text-base font-bold text-accent tracking-wider uppercase">
                 INDIA&apos;S FIRST TESTED TMT BUYING SYSTEM
               </h2>
-              <h1 className="text-5xl md:text-6xl lg:text-8xl font-black text-foreground leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-tight tracking-tight">
                 JSTL TMT BARS
               </h1>
             </div>
@@ -47,7 +47,7 @@ export default function Hero() {
             </div>
             <div className="space-y-1 mt-2">
               <p className="text-lg font-bold text-foreground">
-                👉 Experience Centre + Live Testing = Verified Steel
+                Experience Centre + Live Testing = Verified Steel
               </p>
               <p className="text-md text-muted-foreground">
                 Not a Store. A New Way to Buy Steel.
@@ -94,12 +94,12 @@ export default function Hero() {
           </div>
 
           {/* Right Visual */}
-          <div className="relative hidden md:flex items-center justify-center w-full">
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black">
+          <div className="relative flex items-center justify-center w-full">
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black aspect-[16/10] md:aspect-auto">
               <img
                 src="/hero.jpeg"
                 alt="JSTL TMT Bars Construction"
-                className="w-full h-auto block"
+                className="w-full h-full md:h-auto object-cover md:object-contain block"
               />
             </div>
           </div>

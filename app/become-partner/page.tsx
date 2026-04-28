@@ -127,7 +127,7 @@ export default function BecomePartnerPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section id="application-form" className="py-20 scroll-mt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
@@ -174,7 +174,7 @@ export default function BecomePartnerPage() {
             </div>
 
             {/* Right side: Form */}
-            <div id="application-form" className="bg-card border border-border rounded-3xl shadow-xl overflow-hidden sticky top-28">
+            <div className="bg-card border border-border rounded-3xl shadow-xl overflow-hidden sticky top-28">
               <div className="p-6 sm:p-8 border-b border-border bg-accent/5">
                 <h3 className="text-xl sm:text-2xl font-bold">Partnership Application</h3>
                 <p className="text-muted-foreground mt-2 text-sm">Fill in the details below and our team will get in touch.</p>

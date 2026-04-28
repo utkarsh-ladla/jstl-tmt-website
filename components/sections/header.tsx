@@ -28,6 +28,14 @@ export default function Header() {
       threshold: 0,
     }
 
+    const handleScrollEvent = () => {
+      if (window.scrollY < 100) {
+        setActiveSection('')
+      }
+    }
+
+    window.addEventListener('scroll', handleScrollEvent)
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -41,7 +49,10 @@ export default function Header() {
       if (element) observer.observe(element)
     })
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScrollEvent)
+    }
   }, [])
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -118,13 +129,20 @@ export default function Header() {
                   Become Brand Store Partner
                 </Button>
               </Link>
-              <Button
-                size="sm"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300"
-                onClick={() => document.querySelector('#project-inquiry')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Get Quote
-              </Button>
+              <Link href="/#project-inquiry">
+                <Button
+                  size="sm"
+                  className="bg-white/15 hover:bg-white/25 text-white border border-white/20 font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300 backdrop-blur-md hover:scale-105 active:scale-95"
+                  onClick={(e) => {
+                    if (isHomePage) {
+                      e.preventDefault()
+                      document.querySelector('#project-inquiry')?.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
+                >
+                  Get Quote
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -166,15 +184,20 @@ export default function Header() {
                     Become Brand Store Partner
                   </Button>
                 </Link>
-                <Button
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full"
-                  onClick={() => {
-                    document.querySelector('#project-inquiry')?.scrollIntoView({ behavior: 'smooth' })
-                    setIsOpen(false)
-                  }}
-                >
-                  Get Quote
-                </Button>
+                <Link href="/#project-inquiry" className="w-full">
+                  <Button
+                    className="w-full bg-white/15 hover:bg-white/25 text-white border border-white/20 font-bold uppercase tracking-wider text-[11px] h-11 rounded-full backdrop-blur-md transition-all duration-300"
+                    onClick={(e) => {
+                      if (isHomePage) {
+                        e.preventDefault()
+                        document.querySelector('#project-inquiry')?.scrollIntoView({ behavior: 'smooth' })
+                      }
+                      setIsOpen(false)
+                    }}
+                  >
+                    Get Quote
+                  </Button>
+                </Link>
               </div>
             </nav>
           )}

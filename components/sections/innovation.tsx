@@ -39,7 +39,7 @@ export default function Innovation() {
                 We are introducing India&apos;s First On-Site TMT Testing Units — bringing lab-level verification directly to your construction site.
               </p>
             </div>
-            
+
             <div className="bg-card border border-border rounded-2xl p-8 shadow-lg space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
@@ -104,8 +104,8 @@ export default function Innovation() {
             </div>
 
             <div className="bg-black text-white rounded-xl p-6 border border-accent/30 shadow-xl">
-              <p className="text-accent font-bold text-lg">👉 This is not a dealer shop.</p>
-              <p className="text-accent font-bold text-lg">👉 This is a controlled brand environment built for trust.</p>
+              <p className="text-accent font-bold text-lg">This is not a dealer shop.</p>
+              <p className="text-accent font-bold text-lg">This is a controlled brand environment built for trust.</p>
             </div>
           </div>
         </div>
