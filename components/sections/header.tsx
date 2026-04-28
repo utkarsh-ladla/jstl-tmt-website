@@ -90,14 +90,14 @@ export default function Header() {
                   <img
                     src="/logo4.png"
                     alt="JSTL Logo"
-                    className="h-12 sm:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="h-12 md:h-14 lg:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </a>
             </div>
 
             {/* Navigation - Desktop */}
-            <nav className="hidden md:flex items-center gap-10">
+            <nav className="hidden lg:flex items-center gap-6 xl:gap-10">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
@@ -120,7 +120,7 @@ export default function Header() {
             </nav>
 
             {/* CTA Buttons - Desktop */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-3 xl:gap-4">
               <Link href="/become-partner">
                 <Button
                   size="sm"
@@ -147,7 +147,7 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-accent/10 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-accent/10 transition-colors"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -161,15 +161,15 @@ export default function Header() {
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <nav className="md:hidden py-6 space-y-4 border-t border-border animate-in fade-in slide-in-from-top-4 duration-300">
+            <nav className="lg:hidden py-8 space-y-6 border-t border-white/5 animate-in fade-in slide-in-from-top-4 duration-300">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={isHomePage ? item.href : `/${item.href}`}
                   onClick={(e) => handleScroll(e, item.href)}
                   className={cn(
-                    "block px-4 py-2 text-sm font-bold uppercase tracking-[0.15em] transition-colors",
-                    activeSection === item.href ? "text-accent" : "text-white"
+                    "block px-4 py-3 text-sm font-bold uppercase tracking-[0.2em] transition-colors",
+                    activeSection === item.href ? "text-accent" : "text-white/90 hover:text-accent"
                   )}
                 >
                   {item.label}
@@ -178,7 +178,7 @@ export default function Header() {
               <div className="flex flex-col gap-3 px-4 pt-4">
                 <Link href="/become-partner" className="w-full">
                   <Button
-                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full"
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-xs h-12 rounded-full shadow-lg shadow-accent/20"
                     onClick={() => setIsOpen(false)}
                   >
                     Become Brand Store Partner
@@ -186,7 +186,7 @@ export default function Header() {
                 </Link>
                 <Link href="/#project-inquiry" className="w-full">
                   <Button
-                    className="w-full bg-white/15 hover:bg-white/25 text-white border border-white/20 font-bold uppercase tracking-wider text-[11px] h-11 rounded-full backdrop-blur-md transition-all duration-300"
+                    className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/10 font-bold uppercase tracking-wider text-xs h-12 rounded-full backdrop-blur-md transition-all duration-300"
                     onClick={(e) => {
                       if (isHomePage) {
                         e.preventDefault()

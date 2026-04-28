@@ -26,14 +26,14 @@ export default function Hero() {
   return (
     <section className="relative w-full bg-gradient-to-b from-accent/5 to-background py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-6">
             <div className="space-y-1">
               <h2 className="text-sm md:text-base font-bold text-accent tracking-wider uppercase">
                 INDIA&apos;S FIRST TESTED TMT BUYING SYSTEM
               </h2>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-tight tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-foreground leading-tight tracking-tight">
                 JSTL TMT BARS
               </h1>
             </div>
@@ -99,7 +99,7 @@ export default function Hero() {
               <img
                 src="/hero.jpeg"
                 alt="JSTL TMT Bars Construction"
-                className="w-full h-full md:h-auto object-cover md:object-contain block"
+                className="w-full h-full lg:h-auto object-cover lg:object-contain block"
               />
             </div>
           </div>
