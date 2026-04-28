@@ -1,0 +1,75 @@
+'use client'
+
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+
+export default function Hero() {
+  const handleRequestQuote = () => {
+    document.querySelector('#project-inquiry')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  return (
+    <section className="relative w-full bg-gradient-to-b from-accent/5 to-background py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="flex flex-col gap-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              India&apos;s Trusted Steel Legacy
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Now reinforcing every structure across the nation
+            </p>
+            
+            {/* Hindi Tagline */}
+            <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 my-4">
+              <p className="text-lg italic text-foreground font-semibold">
+                "जो सच है वही टिकेगा… बाकी टेस्ट में दिखेगा।"
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                What is true will last... the rest will be revealed in testing.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full sm:w-auto"
+                onClick={() => document.querySelector('input[placeholder="e.g., 110092"]')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Check Today&apos;s Rate
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full sm:w-auto"
+                onClick={() => document.querySelector('.dealer-modal-trigger')?.click?.()}
+              >
+                Become a Dealer
+              </Button>
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full sm:w-auto"
+                onClick={handleRequestQuote}
+              >
+                Request Project Quote
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Visual */}
+          <div className="relative hidden md:flex items-center justify-center">
+            <div className="w-full h-96 bg-gradient-to-br from-accent/15 to-accent/5 rounded-2xl flex items-center justify-center border border-accent/30">
+              <div className="text-center">
+                <div className="text-6xl font-bold text-accent/20 mb-4">JSTL</div>
+                <p className="text-muted-foreground">High-Strength TMT Bars</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
