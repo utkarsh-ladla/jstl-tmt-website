@@ -20,7 +20,7 @@ export default function TMTBars() {
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <div className="inline-block bg-accent/20 px-4 py-2 rounded-full mb-4">
-            <span className="text-sm font-semibold text-accent">HERO PRODUCT</span>
+            <span className="text-sm font-semibold text-black">HERO PRODUCT</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             JSTL TMT Bars
@@ -61,7 +61,7 @@ export default function TMTBars() {
                     key={size}
                     className="bg-accent/20 border border-accent/40 rounded-lg px-4 py-2 text-center"
                   >
-                    <span className="font-semibold text-accent">{size}mm</span>
+                    <span className="font-semibold text-black">{size}mm</span>
                   </div>
                 ))}
               </div>
@@ -84,7 +84,7 @@ export default function TMTBars() {
 
             {/* Quality Badge */}
             <div className="mt-8 bg-gradient-to-r from-accent/15 to-background border border-accent/40 rounded-lg p-6">
-              <p className="text-sm font-semibold text-accent mb-2">BIS CERTIFIED</p>
+              <p className="text-sm font-semibold text-black mb-2">BIS CERTIFIED</p>
               <p className="text-foreground font-semibold">
                 Fully compliant with IS 1786:2008
               </p>

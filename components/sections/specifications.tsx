@@ -25,7 +25,7 @@ export default function Specifications() {
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <div className="inline-block bg-accent/20 px-4 py-2 rounded-full mb-4">
-            <span className="text-sm font-semibold text-accent">QUALITY ASSURANCE</span>
+            <span className="text-sm font-semibold text-black">QUALITY ASSURANCE</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             BIS Standards Compliance
@@ -109,19 +109,19 @@ export default function Specifications() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <p className="text-sm font-semibold text-accent mb-2">Quality Guarantee</p>
+              <p className="text-sm font-semibold text-black mb-2">Quality Guarantee</p>
               <p className="text-sm text-muted-foreground">
                 BIS standards ensure consistent quality across all production batches
               </p>
             </div>
             <div>
-              <p className="text-sm font-semibold text-accent mb-2">Safety Assurance</p>
+              <p className="text-sm font-semibold text-black mb-2">Safety Assurance</p>
               <p className="text-sm text-muted-foreground">
                 Meets all structural safety requirements for Indian construction codes
               </p>
             </div>
             <div>
-              <p className="text-sm font-semibold text-accent mb-2">Market Trust</p>
+              <p className="text-sm font-semibold text-black mb-2">Market Trust</p>
               <p className="text-sm text-muted-foreground">
                 Recognized and accepted by all major infrastructure and construction projects
               </p>

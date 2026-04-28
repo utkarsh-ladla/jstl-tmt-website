@@ -60,12 +60,15 @@ export default function Hero() {
           </div>
 
           {/* Right Visual */}
-          <div className="relative hidden md:flex items-center justify-center">
-            <div className="w-full h-96 bg-gradient-to-br from-accent/15 to-accent/5 rounded-2xl flex items-center justify-center border border-accent/30">
-              <div className="text-center">
-                <div className="text-6xl font-bold text-accent/20 mb-4">JSTL</div>
-                <p className="text-muted-foreground">High-Strength TMT Bars</p>
-              </div>
+          <div className="relative hidden md:flex items-center justify-center w-full h-full min-h-[400px] lg:min-h-[500px]">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-border">
+              <img 
+                src="/hero.jpeg" 
+                alt="JSTL TMT Bars Construction" 
+                className="w-full h-full object-cover absolute inset-0"
+              />
+              {/* Optional overlay for better blending */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-background/20 to-transparent" />
             </div>
           </div>
         </div>

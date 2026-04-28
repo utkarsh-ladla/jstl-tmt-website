@@ -1,4 +1,5 @@
 import Header from '@/components/sections/header'
+import HeroSlider from '@/components/sections/hero-slider'
 import Hero from '@/components/sections/hero'
 import Legacy from '@/components/sections/legacy'
 import ProductPortfolio from '@/components/sections/product-portfolio'
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <Header />
+      <HeroSlider />
       <Hero />
       <Legacy />
       <ProductPortfolio />

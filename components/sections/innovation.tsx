@@ -7,7 +7,7 @@ export default function Innovation() {
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <div className="inline-block bg-accent/20 px-4 py-2 rounded-full mb-4">
-            <span className="text-sm font-semibold text-accent">GAME-CHANGING TECH</span>
+            <span className="text-sm font-semibold text-black">GAME-CHANGING TECH</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             India&apos;s First Innovation

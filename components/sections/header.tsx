@@ -17,15 +17,13 @@ export default function Header() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">J</span>
-                </div>
-                <div className="hidden sm:block">
-                  <h1 className="text-lg font-bold text-foreground">JSTL</h1>
-                  <p className="text-xs text-muted-foreground">TMT Bars</p>
-                </div>
-              </div>
+              <a href="/" className="flex items-center">
+                <img 
+                  src="/logo1.jpeg" 
+                  alt="JSTL Logo" 
+                  className="h-10 sm:h-12 w-auto object-contain rounded" 
+                />
+              </a>
             </div>
 
             {/* Navigation - Desktop */}
@@ -51,7 +49,7 @@ export default function Header() {
             <div className="hidden md:flex items-center gap-3">
               <Button
                 size="sm"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold dealer-modal-trigger"
                 onClick={() => setIsDealerModalOpen(true)}
               >
                 Become a Dealer

@@ -14,7 +14,7 @@ export default function Manufacturing() {
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <div className="inline-block bg-accent/20 px-4 py-2 rounded-full mb-4">
-            <span className="text-sm font-semibold text-accent">NATIONAL PRESENCE</span>
+            <span className="text-sm font-semibold text-black">NATIONAL PRESENCE</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Manufacturing Network Built Across India
