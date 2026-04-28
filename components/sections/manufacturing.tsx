@@ -6,6 +6,7 @@ export default function Manufacturing() {
     { state: 'Madhya Pradesh', region: 'Central India' },
     { state: 'Maharashtra', region: 'Western India' },
     { state: 'Chhattisgarh', region: 'Central-Eastern India' },
+    { state: 'Jharkhand', region: 'Eastern India' },
   ]
 
   return (
@@ -14,86 +15,88 @@ export default function Manufacturing() {
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
           <div className="inline-block bg-accent px-4 py-2 rounded-full mb-4">
-            <span className="text-sm font-semibold text-black">NATIONAL PRESENCE</span>
+            <span className="text-sm font-semibold text-black uppercase tracking-wider">Manufacturing Network</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Manufacturing Network Built Across India
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase">
+            Built Across India. Controlled by Process.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Strategically located production facilities ensuring quality delivery across the nation
+            Manufactured through a growing network across five key industrial states
           </p>
         </div>
 
         {/* Facilities Map */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
           {facilities.map((facility, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-6 hover:border-accent/30 transition text-center"
+              className="bg-card border border-border rounded-xl p-6 hover:border-accent/30 hover:shadow-lg transition-all duration-300 text-center group"
             >
-              <MapPin className="w-8 h-8 text-accent mx-auto mb-3" />
+              <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
+                <MapPin className="w-6 h-6 text-accent" />
+              </div>
               <h3 className="font-bold text-foreground mb-1">{facility.state}</h3>
-              <p className="text-sm text-muted-foreground">{facility.region}</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-tight">{facility.region}</p>
             </div>
           ))}
         </div>
 
         {/* Quality Systems */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-card border border-border rounded-lg p-8">
-            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+          <div className="bg-card border border-border rounded-xl p-8 hover:border-accent/20 transition-all">
+            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6">
               <Shield className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">Strict Quality Protocols</h3>
-            <p className="text-muted-foreground text-sm">
-              Rigorous testing and quality control measures at every production stage
+            <h3 className="text-lg font-bold text-foreground mb-3">Strict Quality Protocols</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Rigorous testing and quality control measures at every production stage to maintain JSTL standards.
             </p>
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-8">
-            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+          <div className="bg-card border border-border rounded-xl p-8 hover:border-accent/20 transition-all">
+            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6">
               <Zap className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">Automated Processes</h3>
-            <p className="text-muted-foreground text-sm">
-              State-of-the-art automated manufacturing for consistent product quality
+            <h3 className="text-lg font-bold text-foreground mb-3">Automated Processes</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              State-of-the-art automated manufacturing ensuring consistency and precision in every bar produced.
             </p>
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-8">
-            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+          <div className="bg-card border border-border rounded-xl p-8 hover:border-accent/20 transition-all">
+            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6">
               <Shield className="w-6 h-6 text-black" />
             </div>
-            <h3 className="text-lg font-bold text-foreground mb-2">Multi-Stage Testing</h3>
-            <p className="text-muted-foreground text-sm">
-              Comprehensive testing systems ensuring product performance standards
+            <h3 className="text-lg font-bold text-foreground mb-3">Multi-Stage Testing</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Comprehensive testing systems including chemical and mechanical analysis for peak performance.
             </p>
           </div>
         </div>
 
         {/* Key Statistics */}
-        <div className="bg-gradient-to-r from-accent/15 to-background border border-accent/40 rounded-xl p-8">
-          <h3 className="text-xl font-bold text-foreground mb-8 text-center">
-            Manufacturing Excellence Metrics
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-black text-white rounded-2xl p-10 relative overflow-hidden">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="text-center">
-              <p className="text-4xl font-bold text-primary mb-2">4</p>
-              <p className="text-foreground font-semibold">States</p>
-              <p className="text-sm text-muted-foreground">Production coverage</p>
+              <p className="text-5xl font-black text-accent mb-2">5</p>
+              <p className="text-white font-bold uppercase tracking-wider">States</p>
+              <p className="text-sm text-gray-400">Production Network</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl font-bold text-primary mb-2">100K+</p>
-              <p className="text-foreground font-semibold">MT Capacity</p>
-              <p className="text-sm text-muted-foreground">Annual production capability</p>
+              <p className="text-5xl font-black text-accent mb-2">100K+</p>
+              <p className="text-white font-bold uppercase tracking-wider">MT Capacity</p>
+              <p className="text-sm text-gray-400">Annual Capability</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl font-bold text-primary mb-2">99.9%</p>
-              <p className="text-foreground font-semibold">Uptime</p>
-              <p className="text-sm text-muted-foreground">Production reliability</p>
+              <p className="text-5xl font-black text-accent mb-2">50+</p>
+              <p className="text-white font-bold uppercase tracking-wider">Years</p>
+              <p className="text-sm text-gray-400">Industry Excellence</p>
             </div>
           </div>
+          {/* Decorative Glow */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         </div>
+
       </div>
     </section>
   )
