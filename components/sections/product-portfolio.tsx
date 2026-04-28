@@ -39,7 +39,7 @@ export default function ProductPortfolio() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
-          <div className="inline-block bg-accent/20 px-4 py-2 rounded-full mb-4">
+          <div className="inline-block bg-accent px-4 py-2 rounded-full mb-4">
             <span className="text-sm font-semibold text-black">PRODUCT ECOSYSTEM</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -60,8 +60,8 @@ export default function ProductPortfolio() {
                 className="bg-card border border-border rounded-xl p-6 hover:border-accent/30 transition duration-300"
               >
                 <div className="mb-4">
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-black" />
                   </div>
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">

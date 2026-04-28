@@ -13,7 +13,7 @@ export default function Manufacturing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
-          <div className="inline-block bg-accent/20 px-4 py-2 rounded-full mb-4">
+          <div className="inline-block bg-accent px-4 py-2 rounded-full mb-4">
             <span className="text-sm font-semibold text-black">NATIONAL PRESENCE</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -41,8 +41,8 @@ export default function Manufacturing() {
         {/* Quality Systems */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="bg-card border border-border rounded-lg p-8">
-            <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6 text-accent" />
+            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+              <Shield className="w-6 h-6 text-black" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">Strict Quality Protocols</h3>
             <p className="text-muted-foreground text-sm">
@@ -51,8 +51,8 @@ export default function Manufacturing() {
           </div>
 
           <div className="bg-card border border-border rounded-lg p-8">
-            <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
-              <Zap className="w-6 h-6 text-accent" />
+            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+              <Zap className="w-6 h-6 text-black" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">Automated Processes</h3>
             <p className="text-muted-foreground text-sm">
@@ -61,8 +61,8 @@ export default function Manufacturing() {
           </div>
 
           <div className="bg-card border border-border rounded-lg p-8">
-            <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6 text-accent" />
+            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+              <Shield className="w-6 h-6 text-black" />
             </div>
             <h3 className="text-lg font-bold text-foreground mb-2">Multi-Stage Testing</h3>
             <p className="text-muted-foreground text-sm">

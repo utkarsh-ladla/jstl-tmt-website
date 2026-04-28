@@ -60,7 +60,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-md">
+      <header className="sticky top-0 z-50 w-full border-b border-border bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -68,9 +68,9 @@ export default function Header() {
               <a href="/" className="flex items-center group">
                 <div className="relative overflow-hidden rounded-lg">
                   <img
-                    src="/logo3.jpg"
+                    src="/logo4.png"
                     alt="JSTL Logo"
-                    className="h-10 sm:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="h-12 sm:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </a>
@@ -87,7 +87,7 @@ export default function Header() {
                     "text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 relative group",
                     activeSection === item.href
                       ? "text-accent"
-                      : "text-foreground/80 hover:text-accent"
+                      : "text-white hover:text-accent"
                   )}
                 >
                   {item.label}
@@ -103,14 +103,14 @@ export default function Header() {
             <div className="hidden md:flex items-center gap-4">
               <Button
                 size="sm"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300 shadow-lg shadow-accent/20 dealer-modal-trigger"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300 dealer-modal-trigger"
                 onClick={() => setIsDealerModalOpen(true)}
               >
-                Become a Dealer
+                Become Brand Store Partner
               </Button>
               <Button
                 size="sm"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300 shadow-lg shadow-primary/20"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300"
                 onClick={() => document.querySelector('#project-inquiry')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get Quote
@@ -124,9 +124,9 @@ export default function Header() {
               aria-label="Toggle menu"
             >
               {isOpen ? (
-                <X className="w-6 h-6 text-foreground" />
+                <X className="w-6 h-6 text-white" />
               ) : (
-                <Menu className="w-6 h-6 text-foreground" />
+                <Menu className="w-6 h-6 text-white" />
               )}
             </button>
           </div>
@@ -141,7 +141,7 @@ export default function Header() {
                   onClick={(e) => handleScroll(e, item.href)}
                   className={cn(
                     "block px-4 py-2 text-sm font-bold uppercase tracking-[0.15em] transition-colors",
-                    activeSection === item.href ? "text-accent" : "text-foreground/80"
+                    activeSection === item.href ? "text-accent" : "text-white"
                   )}
                 >
                   {item.label}
@@ -149,13 +149,13 @@ export default function Header() {
               ))}
               <div className="flex flex-col gap-3 px-4 pt-4">
                 <Button
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full shadow-lg shadow-accent/20"
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full"
                   onClick={() => setIsDealerModalOpen(true)}
                 >
-                  Become a Dealer
+                  Become Brand Store Partner
                 </Button>
                 <Button
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full shadow-lg shadow-primary/20"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full"
                   onClick={() => {
                     document.querySelector('#project-inquiry')?.scrollIntoView({ behavior: 'smooth' })
                     setIsOpen(false)

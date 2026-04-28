@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <div className="flex flex-col items-start gap-3 mb-6">
               <div className="bg-white p-2 rounded-xl inline-flex items-center justify-center">
-                <img src="/logo2.jpeg" alt="JSTL Logo" className="h-12 sm:h-14 w-auto object-contain rounded" />
+                <img src="/logo5.png" alt="JSTL Logo" className="h-16 sm:h-20 w-auto object-contain" />
               </div>
               <div>
                 <h3 className="font-bold text-lg">JSTL TMT Bars</h3>

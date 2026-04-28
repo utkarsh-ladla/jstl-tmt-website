@@ -49,7 +49,7 @@ export default function DealerInquiry() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
-          <div className="inline-block bg-accent/20 px-4 py-2 rounded-full mb-4">
+          <div className="inline-block bg-accent px-4 py-2 rounded-full mb-4">
             <span className="text-sm font-semibold text-black">PARTNERSHIP OPPORTUNITY</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

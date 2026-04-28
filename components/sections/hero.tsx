@@ -20,7 +20,7 @@ export default function Hero() {
             <p className="text-xl text-muted-foreground">
               Now reinforcing every structure across the nation
             </p>
-            
+
             {/* Hindi Tagline */}
             <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 my-4">
               <p className="text-lg italic text-foreground font-semibold">
@@ -32,9 +32,9 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                size="lg" 
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
+              <Button
+                size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full sm:w-auto"
                 onClick={() => document.querySelector('input[placeholder="e.g., 110092"]')?.scrollIntoView({ behavior: 'smooth' })}
               >
@@ -46,7 +46,7 @@ export default function Hero() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full sm:w-auto"
                 onClick={() => document.querySelector('.dealer-modal-trigger')?.click?.()}
               >
-                Become a Dealer
+                Become Brand Store Partner
               </Button>
               <Button
                 size="lg"
@@ -60,15 +60,13 @@ export default function Hero() {
           </div>
 
           {/* Right Visual */}
-          <div className="relative hidden md:flex items-center justify-center w-full h-full min-h-[400px] lg:min-h-[500px]">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-border">
-              <img 
-                src="/hero.jpeg" 
-                alt="JSTL TMT Bars Construction" 
-                className="w-full h-full object-cover absolute inset-0"
+          <div className="relative hidden md:flex items-center justify-center w-full">
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black">
+              <img
+                src="/hero2.jpeg"
+                alt="JSTL TMT Bars Construction"
+                className="w-full h-auto block"
               />
-              {/* Optional overlay for better blending */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-background/20 to-transparent" />
             </div>
           </div>
         </div>

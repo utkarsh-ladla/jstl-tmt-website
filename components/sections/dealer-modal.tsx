@@ -240,7 +240,7 @@ export default function DealerModal({ isOpen, onClose }: DealerModalProps) {
                 </form>
               ) : (
                 <div className="text-center py-12">
-                  <div className="inline-block bg-accent/20 rounded-full p-4 mb-4">
+                  <div className="inline-block bg-accent rounded-full p-4 mb-4">
                     <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>

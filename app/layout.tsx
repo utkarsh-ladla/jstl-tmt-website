@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: 'JSTL TMT Bars - India\'s Trusted Steel Legacy',
   description: 'JSTL TMT Bars - High-strength, earthquake-resistant reinforcing bars manufactured by Jindal Steel Tubes Limited. Available in Fe 550D & UHD 550 grades.',
   icons: {
-    icon: '/logo2.jpeg',
-    apple: '/logo2.jpeg',
+    icon: '/logo5.png',
+    apple: '/logo5.png',
   },
 }
 

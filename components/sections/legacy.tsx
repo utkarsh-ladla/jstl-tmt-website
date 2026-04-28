@@ -6,7 +6,7 @@ export default function Legacy() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center max-w-3xl mx-auto">
-          <div className="inline-block bg-accent/20 px-4 py-2 rounded-full mb-4">
+          <div className="inline-block bg-accent px-4 py-2 rounded-full mb-4">
             <span className="text-sm font-semibold text-black">OUR HERITAGE</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -23,8 +23,8 @@ export default function Legacy() {
           <div className="space-y-6">
             <div className="flex gap-4">
               <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/20">
-                  <Factory className="w-6 h-6 text-accent" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
+                  <Factory className="w-6 h-6 text-black" />
                 </div>
               </div>
               <div>
@@ -39,8 +39,8 @@ export default function Legacy() {
 
             <div className="flex gap-4">
               <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/20">
-                  <Award className="w-6 h-6 text-accent" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
+                  <Award className="w-6 h-6 text-black" />
                 </div>
               </div>
               <div>
