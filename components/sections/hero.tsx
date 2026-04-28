@@ -2,10 +2,25 @@
 
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Hero() {
+  const scrollToSection = (id: string) => {
+    const element = document.querySelector(id)
+    if (element) {
+      const headerOffset = 80
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   const handleRequestQuote = () => {
-    document.querySelector('#project-inquiry')?.scrollIntoView({ behavior: 'smooth' })
+    scrollToSection('#project-inquiry')
   }
 
   return (
@@ -14,10 +29,10 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight">
               India&apos;s Trusted Steel Legacy
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               Now reinforcing every structure across the nation
             </p>
 
@@ -36,18 +51,19 @@ export default function Hero() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold w-full sm:w-auto"
-                onClick={() => document.querySelector('input[placeholder="e.g., 110092"]')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => scrollToSection('#pricing')}
               >
                 Check Today&apos;s Rate
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Button
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full sm:w-auto"
-                onClick={() => document.querySelector('.dealer-modal-trigger')?.click?.()}
-              >
-                Become Brand Store Partner
-              </Button>
+              <Link href="/become-partner" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full"
+                >
+                  Become Brand Store Partner
+                </Button>
+              </Link>
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full sm:w-auto"
@@ -63,7 +79,7 @@ export default function Hero() {
           <div className="relative hidden md:flex items-center justify-center w-full">
             <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black">
               <img
-                src="/hero2.jpeg"
+                src="/hero.jpeg"
                 alt="JSTL TMT Bars Construction"
                 className="w-full h-auto block"
               />

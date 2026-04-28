@@ -1,7 +1,13 @@
+'use client'
+
 import { MapPin, Mail, Phone } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const pathname = usePathname()
+  const isHomePage = pathname === '/'
 
   return (
     <footer className="w-full bg-foreground text-background">
@@ -29,24 +35,24 @@ export default function Footer() {
             <h4 className="font-semibold mb-4 text-background">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#legacy" className="text-background/70 hover:text-background transition">
+                <Link href={isHomePage ? "#legacy" : "/#legacy"} className="text-background/70 hover:text-background transition">
                   Our Legacy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#products" className="text-background/70 hover:text-background transition">
+                <Link href={isHomePage ? "#products" : "/#products"} className="text-background/70 hover:text-background transition">
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#tmt" className="text-background/70 hover:text-background transition">
+                <Link href={isHomePage ? "#tmt" : "/#tmt"} className="text-background/70 hover:text-background transition">
                   TMT Bars
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#specs" className="text-background/70 hover:text-background transition">
+                <Link href={isHomePage ? "#specs" : "/#specs"} className="text-background/70 hover:text-background transition">
                   Specifications
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

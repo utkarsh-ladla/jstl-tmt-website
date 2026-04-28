@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
-import DealerModal from './dealer-modal'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isDealerModalOpen, setIsDealerModalOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
+  const pathname = usePathname()
+  const isHomePage = pathname === '/'
 
   const navItems = [
     { label: 'Legacy', href: '#legacy' },
@@ -43,19 +45,26 @@ export default function Header() {
   }, [])
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!isHomePage) return // Allow default link behavior to navigate to home page
     e.preventDefault()
-    const element = document.querySelector(href)
-    if (element) {
-      const headerOffset = 80
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
+    
+    // Close mobile menu first so it doesn't interfere with position calculations
     setIsOpen(false)
+
+    // Small timeout to allow the menu to close and layout to stabilize
+    setTimeout(() => {
+      const element = document.querySelector(href)
+      if (element) {
+        const headerOffset = 80
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      }
+    }, 10)
   }
 
   return (
@@ -79,9 +88,9 @@ export default function Header() {
             {/* Navigation - Desktop */}
             <nav className="hidden md:flex items-center gap-10">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
-                  href={item.href}
+                  href={isHomePage ? item.href : `/${item.href}`}
                   onClick={(e) => handleScroll(e, item.href)}
                   className={cn(
                     "text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 relative group",
@@ -95,19 +104,20 @@ export default function Header() {
                     "absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] bg-accent transition-all duration-300",
                     activeSection === item.href ? "w-full opacity-100" : "w-0 opacity-0 group-hover:w-1/2 group-hover:opacity-100"
                   )} />
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* CTA Buttons - Desktop */}
             <div className="hidden md:flex items-center gap-4">
-              <Button
-                size="sm"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300 dealer-modal-trigger"
-                onClick={() => setIsDealerModalOpen(true)}
-              >
-                Become Brand Store Partner
-              </Button>
+              <Link href="/become-partner">
+                <Button
+                  size="sm"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300"
+                >
+                  Become Brand Store Partner
+                </Button>
+              </Link>
               <Button
                 size="sm"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-[11px] h-10 px-6 rounded-full transition-all duration-300"
@@ -135,9 +145,9 @@ export default function Header() {
           {isOpen && (
             <nav className="md:hidden py-6 space-y-4 border-t border-border animate-in fade-in slide-in-from-top-4 duration-300">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
-                  href={item.href}
+                  href={isHomePage ? item.href : `/${item.href}`}
                   onClick={(e) => handleScroll(e, item.href)}
                   className={cn(
                     "block px-4 py-2 text-sm font-bold uppercase tracking-[0.15em] transition-colors",
@@ -145,15 +155,17 @@ export default function Header() {
                   )}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="flex flex-col gap-3 px-4 pt-4">
-                <Button
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full"
-                  onClick={() => setIsDealerModalOpen(true)}
-                >
-                  Become Brand Store Partner
-                </Button>
+                <Link href="/become-partner" className="w-full">
+                  <Button
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Become Brand Store Partner
+                  </Button>
+                </Link>
                 <Button
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wider text-[11px] h-11 rounded-full"
                   onClick={() => {
@@ -168,7 +180,6 @@ export default function Header() {
           )}
         </div>
       </header>
-      <DealerModal isOpen={isDealerModalOpen} onClose={() => setIsDealerModalOpen(false)} />
     </>
   )
 }

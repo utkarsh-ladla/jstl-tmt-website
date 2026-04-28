@@ -8,7 +8,6 @@ import Innovation from '@/components/sections/innovation'
 import Specifications from '@/components/sections/specifications'
 import Manufacturing from '@/components/sections/manufacturing'
 import Pricing from '@/components/sections/pricing'
-import DealerInquiry from '@/components/sections/dealer-inquiry'
 import ProjectInquiry from '@/components/sections/project-inquiry'
 import Footer from '@/components/sections/footer'
 
@@ -25,7 +24,6 @@ export default function Home() {
       <Specifications />
       <Manufacturing />
       <Pricing />
-      <DealerInquiry />
       <div id="project-inquiry">
         <ProjectInquiry />
       </div>
