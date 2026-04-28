@@ -11,7 +11,7 @@ export default function TMTBars() {
     'Superior Ductility (Earthquake Resistant)',
     'Better Bonding with Concrete',
     'Corrosion Resistance',
-    'Consistent Quality Across Batches',
+    'Batch Consistency',
   ]
 
   return (
@@ -70,7 +70,10 @@ export default function TMTBars() {
 
           {/* Right - Why JSTL TMT */}
           <div>
-            <h3 className="text-2xl font-bold text-foreground mb-6">Why JSTL TMT?</h3>
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-2">Why JSTL TMT?</h3>
+              <p className="text-accent font-semibold italic">Most brands talk strength. We prove it.</p>
+            </div>
             <div className="space-y-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex gap-4 items-start">

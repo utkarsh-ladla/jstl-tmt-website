@@ -64,7 +64,7 @@ export default function Footer() {
               <div className="flex gap-2 items-start">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span className="text-background/70">
-                  H-No 8-2-684/1/1, Flat No. 202, Valley View Residency, Banjara Hills, Hyderabad – 500034
+                  G-81 & 82, Old G-23A, 201, 2nd Floor, Laxmi Nagar, East Delhi, Delhi – 110092
                 </span>
               </div>
               <div className="flex gap-2 items-center">
@@ -89,10 +89,12 @@ export default function Footer() {
               <div>
                 <p className="font-semibold text-background mb-1">Jindal Steel Tubes Limited</p>
                 <p>CIN: U27109TG1973PLC001662</p>
+                <p>Reg. Office: Hyderabad, Telangana</p>
               </div>
               <div>
-                <p className="font-semibold text-background mb-1">Khyati Contech Pvt. Ltd.</p>
+                <p className="font-semibold text-background mb-1">Khyati Contech Private Limited</p>
                 <p>CIN: U46632DL2026PTC464070</p>
+                <p>Reg. Office: Laxmi Nagar, Delhi</p>
               </div>
             </div>
           </div>
@@ -132,12 +134,18 @@ export default function Footer() {
                 Contact Us
               </a>
             </p>
+            <div className="max-w-2xl mx-auto">
+              <p className="text-[10px] text-background/40 text-center leading-relaxed">
+                <span className="font-semibold">TRANSPARENCY NOTE:</span> JSTL TMT Bars are manufactured by Jindal Steel Tubes Limited. 
+                Branding, distribution, and market operations are managed by Khyati Infra Mart (Khyati Contech Private Limited).
+              </p>
+            </div>
           </div>
 
           {/* Brand Statement */}
           <div className="text-center border-t border-background/20 pt-6">
             <p className="text-sm italic text-background/80">
-              "Legacy Builds Trust. Testing Builds Proof. JSTL Builds Both."
+              "Legacy builds trust. Testing builds proof. JSTL delivers both."
             </p>
           </div>
         </div>

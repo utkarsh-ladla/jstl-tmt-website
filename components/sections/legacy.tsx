@@ -13,7 +13,7 @@ export default function Legacy() {
             50+ Years of Steel Excellence
           </h2>
           <p className="text-lg text-muted-foreground">
-            Jindal Steel Tubes Limited has built a strong reputation in India&apos;s steel industry through decades of manufacturing excellence.
+            Jindal Steel Tubes Limited has built a strong reputation through decades of engineering excellence. From pipes and tubes to structural steel, the company has consistently delivered high-performance products trusted across industries.
           </p>
         </div>
 

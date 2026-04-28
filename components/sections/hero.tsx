@@ -29,12 +29,30 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-              India&apos;s Trusted Steel Legacy
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              Now reinforcing every structure across the nation
-            </p>
+            <div className="space-y-1">
+              <h2 className="text-sm md:text-base font-bold text-accent tracking-wider uppercase">
+                INDIA&apos;S FIRST TESTED TMT BUYING SYSTEM
+              </h2>
+              <h1 className="text-5xl md:text-6xl lg:text-8xl font-black text-foreground leading-tight">
+                JSTL TMT BARS
+              </h1>
+            </div>
+            <div className="space-y-2">
+              <p className="text-lg md:text-xl font-medium text-muted-foreground flex items-center gap-2">
+                A Product of <span className="text-foreground font-bold">Jindal Steel Tubes Limited</span>
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground">
+                Powered by <span className="text-accent font-semibold">Khyati Infra Mart</span>
+              </p>
+            </div>
+            <div className="space-y-1 mt-2">
+              <p className="text-lg font-bold text-foreground">
+                👉 Experience Centre + Live Testing = Verified Steel
+              </p>
+              <p className="text-md text-muted-foreground">
+                Not a Store. A New Way to Buy Steel.
+              </p>
+            </div>
 
             {/* Hindi Tagline */}
             <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 my-4">

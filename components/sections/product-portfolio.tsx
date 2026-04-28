@@ -14,11 +14,11 @@ export default function ProductPortfolio() {
     },
     {
       title: 'Hollow Sections',
-      icon: Wrench,
+      icon: Box,
       description: 'Square, rectangular, and round hollow sections for structural applications',
     },
     {
-      title: 'Angles & Channels',
+      title: 'Angles, Channels & Sections',
       icon: Wrench,
       description: 'Structural angles, channels, and steel sections for construction',
     },
@@ -28,8 +28,18 @@ export default function ProductPortfolio() {
       description: 'Custom fabricated steel components engineered to your specifications',
     },
     {
-      title: 'Custom Solutions',
+      title: 'Industrial Tubing',
       icon: Zap,
+      description: 'High-performance tubing solutions for industrial processing and systems',
+    },
+    {
+      title: 'Profile Sheets',
+      icon: Box,
+      description: 'Durable and aesthetic profile sheets for roofing and cladding',
+    },
+    {
+      title: 'Custom Steel Solutions',
+      icon: Wrench,
       description: 'Tailored steel solutions for unique industrial and construction needs',
     },
   ]

@@ -27,102 +27,97 @@ export default function Innovation() {
         </div>
 
         {/* Content Below */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column - Features List */}
-          <div className="bg-card border border-border rounded-2xl p-8 shadow-lg space-y-6">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
-                  <Beaker className="w-6 h-6 text-black" />
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">
-                  Real-Time Verification
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Test quality directly at your construction site
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
-                  <CheckCircle2 className="w-6 h-6 text-black" />
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">
-                  Zero Assumptions
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  No blind trust — only verified, tested steel
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
-                  <Zap className="w-6 h-6 text-black" />
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">
-                  Instant Results
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Get mechanical and chemical test results on-site
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Transparency */}
+        {/* Content Below */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
+          {/* Left Column - On-Site Testing */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Transparency at Every Step
+                1. On-Site TMT Testing Unit
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                We are introducing India&apos;s first on-site TMT testing units — bringing quality verification directly to your construction site.
+                We are introducing India&apos;s First On-Site TMT Testing Units — bringing lab-level verification directly to your construction site.
               </p>
             </div>
-
-            {/* Key Points */}
-            <div className="space-y-4">
-              <div className="bg-accent/5 border border-accent rounded-xl p-5 hover:bg-accent/10 transition-colors">
-                <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-                  No Assumptions. No Blind Trust.
-                </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Every batch of JSTL TMT Bars can be tested on-site for full compliance with IS 1786:2008 standards, ensuring you get exactly what you pay for.
-                </p>
+            
+            <div className="bg-card border border-border rounded-2xl p-8 shadow-lg space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
+                    <Beaker className="w-6 h-6 text-black" />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1">No Assumptions</h4>
+                  <p className="text-sm text-muted-foreground">Only tested steel at your site</p>
+                </div>
               </div>
-
-              <div className="bg-accent/5 border border-accent rounded-xl p-5 hover:bg-accent/10 transition-colors">
-                <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-                  Only Tested Steel.
-                </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Our commitment to transparency means you have complete visibility into every aspect of material quality before a single bar is laid.
-                </p>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
+                    <CheckCircle2 className="w-6 h-6 text-black" />
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1">No Middle Layers</h4>
+                  <p className="text-sm text-muted-foreground">Direct verification of quality</p>
+                </div>
               </div>
-            </div>
-
-            {/* Confidence Statement */}
-            <div className="bg-gradient-to-r from-accent to-background border-2 border-accent/30 rounded-xl p-6 shadow-inner">
-              <p className="text-foreground font-bold text-xl mb-1">
-                Testing Builds Proof. JSTL Builds Both.
-              </p>
-              <p className="text-sm font-medium text-muted-foreground italic">
-                Legacy Builds Trust. Innovation Secures It.
-              </p>
             </div>
           </div>
+
+          {/* Right Column - Experience Centres */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                2. Experience Centres
+              </h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Our dedicated brand experience centres ensure that before you buy, you see the product, understand the quality, and verify the claims.
+              </p>
+            </div>
+
+            <div className="bg-accent/5 border border-accent rounded-xl p-6 hover:bg-accent/10 transition-colors">
+              <h4 className="font-bold text-foreground mb-4 text-xl">What Makes This Different?</h4>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3 text-sm font-medium">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  Single Brand Environment (No confusion)
+                </li>
+                <li className="flex items-center gap-3 text-sm font-medium">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  Physical Product Interaction (See, feel, compare)
+                </li>
+                <li className="flex items-center gap-3 text-sm font-medium">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  Integrated Testing Support
+                </li>
+                <li className="flex items-center gap-3 text-sm font-medium">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  Expert Consultation
+                </li>
+                <li className="flex items-center gap-3 text-sm font-medium">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  Transparent Buying Journey
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-black text-white rounded-xl p-6 border border-accent/30 shadow-xl">
+              <p className="text-accent font-bold text-lg">👉 This is not a dealer shop.</p>
+              <p className="text-accent font-bold text-lg">👉 This is a controlled brand environment built for trust.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Final Branding Line */}
+        <div className="text-center bg-gradient-to-r from-accent to-background border-2 border-accent/30 rounded-2xl p-10 shadow-2xl">
+          <h3 className="text-3xl md:text-4xl font-black text-foreground mb-2">
+            FROM SHOWROOM → TO PROOF ROOM
+          </h3>
+          <p className="text-lg font-medium text-muted-foreground italic">
+            Building a complete transparent system.
+          </p>
         </div>
       </div>
     </section>
