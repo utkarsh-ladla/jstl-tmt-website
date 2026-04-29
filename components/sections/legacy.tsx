@@ -67,7 +67,7 @@ export default function Legacy() {
                   <p className="text-sm text-muted-foreground mt-1">MT Annual Capacity</p>
                 </div>
                 <div className="bg-muted rounded-lg p-4 text-center col-span-2">
-                  <p className="text-3xl font-bold text-primary">4</p>
+                  <p className="text-3xl font-bold text-primary">5</p>
                   <p className="text-sm text-muted-foreground mt-1">Manufacturing States</p>
                 </div>
               </div>

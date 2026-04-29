@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, CheckCircle2, Mail, Phone, User } from 'lucide-react'
+import { submitInquiry } from '@/lib/api'
 
 export default function Pricing() {
   const [formData, setFormData] = useState({
@@ -13,21 +14,35 @@ export default function Pricing() {
     quantity: ''
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target
     setFormData(prev => ({ ...prev, [id]: value }))
   }
 
-  const handleGetRate = (e: React.FormEvent) => {
+  const handleGetRate = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (formData.pincode && formData.quantity && formData.email) {
-      console.log('Price inquiry submitted:', formData)
+    setLoading(true)
+    setError(null)
+
+    try {
+      await submitInquiry({
+        type: 'pricing',
+        details: {
+          name: formData.name,
+          email: formData.email,
+          mobile: formData.mobile,
+          pinCode: formData.pincode,
+          quantity: formData.quantity
+        }
+      })
       setSubmitted(true)
-      // Simulate API call
-      setTimeout(() => {
-        // Reset after some time or keep showing success
-      }, 5000)
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -144,13 +159,21 @@ export default function Pricing() {
                   </div>
                 </div>
 
+                {/* Error Message */}
+                {error && (
+                  <p className="text-red-500 text-sm text-center font-semibold bg-red-50 py-2 rounded-lg border border-red-100">
+                    {error}
+                  </p>
+                )}
+
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-14 text-lg font-bold rounded-xl shadow-lg shadow-accent/20 transition-all"
+                  disabled={loading}
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-14 text-lg font-bold rounded-xl shadow-lg shadow-accent/20 transition-all disabled:opacity-70"
                 >
-                  Get Live Rate via Email
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  {loading ? 'Sending Request...' : 'Get Live Rate via Email'}
+                  {!loading && <ArrowRight className="ml-2 w-5 h-5" />}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
@@ -165,12 +188,12 @@ export default function Pricing() {
               </div>
               <h3 className="text-2xl font-bold mb-3">Request Received!</h3>
               <p className="text-muted-foreground mb-8">
-                Thank you, <span className="text-foreground font-semibold">{formData.name}</span>. 
-                Our admin will send the latest live rates for <span className="text-foreground font-semibold">PIN {formData.pincode}</span> 
+                Thank you, <span className="text-foreground font-semibold">{formData.name}</span>.
+                Our admin will send the latest live rates for <span className="text-foreground font-semibold">PIN {formData.pincode}</span>
                 to <span className="text-foreground font-semibold">{formData.email}</span> within 15 minutes.
               </p>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="border-accent text-accent hover:bg-accent hover:text-white"
                 onClick={() => setSubmitted(false)}
               >

@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="font-bold text-lg">JSTL TMT Bars</h3>
-                <p className="text-sm text-background/60">By Jindal Steel</p>
+                <p className="text-sm text-background/60">By Jindal Steel Ltd</p>
               </div>
             </div>
             <p className="text-sm text-background/70">
@@ -76,7 +76,7 @@ export default function Footer() {
               <div className="flex gap-2 items-center">
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 <a href="mailto:sales@jstltmt.com" className="text-background/70 hover:text-background transition">
-                  sales@jstltmt.com
+                  sales.jstljindal@gmail.com
                 </a>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function Footer() {
           {/* Legal */}
           <div>
             <p className="text-xs text-background/50 text-center">
-              © {currentYear} JSTL TMT Bars. All rights reserved. | 
+              © {currentYear} JSTL TMT Bars. All rights reserved. |
               <a href="#" className="text-background/70 hover:text-background transition ml-1">
                 Privacy Policy
               </a>
@@ -136,7 +136,7 @@ export default function Footer() {
             </p>
             <div className="max-w-2xl mx-auto">
               <p className="text-[10px] text-background/40 text-center leading-relaxed">
-                <span className="font-semibold">TRANSPARENCY NOTE:</span> JSTL TMT Bars are manufactured by Jindal Steel Tubes Limited. 
+                <span className="font-semibold">TRANSPARENCY NOTE:</span> JSTL TMT Bars are manufactured by Jindal Steel Tubes Limited.
                 Branding, distribution, and market operations are managed by Khyati Infra Mart (Khyati Contech Private Limited).
               </p>
             </div>

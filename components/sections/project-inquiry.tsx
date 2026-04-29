@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { submitInquiry } from '@/lib/api'
 
 interface ProjectFormData {
   companyName: string
@@ -24,6 +25,8 @@ export default function ProjectInquiry() {
   })
 
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -35,11 +38,30 @@ export default function ProjectInquiry() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Project inquiry submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
+    setLoading(true)
+    setError(null)
+
+    try {
+      await submitInquiry({
+        type: 'project',
+        details: {
+          nameCompany: formData.companyName,
+          contact: formData.contact,
+          locationPin: formData.pincode,
+          quantity: formData.quantity,
+          sizes: formData.sizes,
+          timeline: formData.timeline
+        }
+      })
+      setSubmitted(true)
+      // Success state reset handled by UI conditional or timer
+    } catch (err: any) {
+      setError(err.message || 'Submission failed. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -171,19 +193,38 @@ export default function ProjectInquiry() {
             <div className="pt-4">
               <Button
                 type="submit"
-                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-12 text-base font-semibold"
+                disabled={loading}
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-14 text-lg font-bold rounded-xl transition-all disabled:opacity-70"
               >
-                Request Quote
-                <ArrowRight className="ml-2 w-4 h-4" />
+                {loading ? 'Sending Request...' : 'Request Project Quote'}
+                {!loading && <ArrowRight className="ml-2 w-5 h-5" />}
               </Button>
             </div>
 
+            {/* Error Message */}
+            {error && (
+              <p className="text-red-500 text-sm text-center font-semibold bg-red-50 py-3 rounded-xl border border-red-100">
+                {error}
+              </p>
+            )}
+
             {/* Success Message */}
             {submitted && (
-              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 text-center">
-                <p className="text-sm font-semibold text-primary">
-                  Thank you! We&apos;ve received your quote request. Our team will contact you with a detailed proposal.
+              <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-6 text-center">
+                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle2 className="w-6 h-6 text-green-500" />
+                </div>
+                <h4 className="text-lg font-bold text-foreground mb-1">Quote Request Sent!</h4>
+                <p className="text-sm text-muted-foreground">
+                  Thank you! We&apos;ve received your bulk requirement. Our project sales team will contact you with a customized proposal within 24 hours.
                 </p>
+                <Button 
+                  variant="link" 
+                  className="text-accent mt-4"
+                  onClick={() => setSubmitted(false)}
+                >
+                  Send another request
+                </Button>
               </div>
             )}
           </form>

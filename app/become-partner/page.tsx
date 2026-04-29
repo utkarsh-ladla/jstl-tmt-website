@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button'
 import Header from '@/components/sections/header'
 import Footer from '@/components/sections/footer'
 
+import { submitInquiry } from '@/lib/api'
+
 interface FormData {
   name: string
   firmName: string
@@ -28,6 +30,8 @@ export default function BecomePartnerPage() {
   })
 
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -39,12 +43,31 @@ export default function BecomePartnerPage() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Dealer inquiry submitted:', formData)
-    setSubmitted(true)
-    // Scroll to success message
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setLoading(true)
+    setError(null)
+
+    try {
+      await submitInquiry({
+        type: 'dealer',
+        details: {
+          name: formData.name,
+          firmName: formData.firmName,
+          mobile: formData.mobile,
+          cityState: formData.city,
+          volume: formData.monthlyVolume,
+          currentBrands: formData.currentBrands,
+          warehouse: formData.warehouse
+        }
+      })
+      setSubmitted(true)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } catch (err: any) {
+      setError(err.message || 'Submission failed. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const benefits = [
@@ -278,9 +301,19 @@ export default function BecomePartnerPage() {
                       </div>
                     </div>
 
-                    <Button type="submit" className="w-full h-14 text-lg font-bold bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl transition-all shadow-lg shadow-accent/20">
-                      Apply for Partnership
-                      <ArrowRight className="ml-2 w-5 h-5" />
+                    {error && (
+                      <p className="text-red-500 text-sm text-center font-semibold bg-red-50 py-3 rounded-xl border border-red-100">
+                        {error}
+                      </p>
+                    )}
+
+                    <Button 
+                      type="submit" 
+                      disabled={loading}
+                      className="w-full h-14 text-lg font-bold bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl transition-all shadow-lg shadow-accent/20 disabled:opacity-70"
+                    >
+                      {loading ? 'Submitting Application...' : 'Apply for Partnership'}
+                      {!loading && <ArrowRight className="ml-2 w-5 h-5" />}
                     </Button>
                   </form>
                 ) : (
