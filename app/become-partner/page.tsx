@@ -96,18 +96,18 @@ export default function BecomePartnerPage() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Page Hero */}
       <section className="relative py-20 lg:py-32 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img 
-            src="/hero.jpeg" 
-            alt="Background" 
+          <img
+            src="/hero.jpeg"
+            alt="Background"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl text-center lg:text-left">
@@ -122,8 +122,8 @@ export default function BecomePartnerPage() {
                 Join India's fastest-growing steel distribution network. Build a legacy of strength in your city with our premium TMT bars and dedicated support system.
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold h-14 px-8 text-lg rounded-xl w-full sm:w-auto"
                   onClick={() => document.querySelector('#application-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
@@ -136,9 +136,9 @@ export default function BecomePartnerPage() {
             {/* Hero Visual - The Poster */}
             <div className="relative mt-12 lg:mt-0">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(234,179,8,0.3)] border border-accent/20 group max-w-md mx-auto lg:max-w-none">
-                <img 
-                  src="/hero2.jpeg" 
-                  alt="JSTL Distribution Model" 
+                <img
+                  src="/hero2.jpeg"
+                  alt="JSTL Distribution Model"
                   className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -153,7 +153,7 @@ export default function BecomePartnerPage() {
       <section id="application-form" className="py-20 scroll-mt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            
+
             {/* Left side: Information */}
             <div className="space-y-12">
               <div>
@@ -187,7 +187,7 @@ export default function BecomePartnerPage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">On-Site TMT Testing Advantage</span>
+                      <span className="text-sm sm:text-base">Site TMT Testing Advantage</span>
                     </li>
                   </ul>
                 </div>
@@ -202,7 +202,7 @@ export default function BecomePartnerPage() {
                 <h3 className="text-xl sm:text-2xl font-bold">Partnership Application</h3>
                 <p className="text-muted-foreground mt-2 text-sm">Fill in the details below and our team will get in touch.</p>
               </div>
-              
+
               <div className="p-6 sm:p-8">
                 {!submitted ? (
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -307,8 +307,8 @@ export default function BecomePartnerPage() {
                       </p>
                     )}
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       disabled={loading}
                       className="w-full h-14 text-lg font-bold bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl transition-all shadow-lg shadow-accent/20 disabled:opacity-70"
                     >
@@ -323,8 +323,8 @@ export default function BecomePartnerPage() {
                     </div>
                     <h4 className="text-2xl font-bold mb-2">Application Sent!</h4>
                     <p className="text-muted-foreground">Thank you for your interest in JSTL. Our regional manager will contact you within 48 hours.</p>
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="mt-8 border-accent text-accent hover:bg-accent hover:text-white"
                       onClick={() => setSubmitted(false)}
                     >

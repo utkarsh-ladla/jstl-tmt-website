@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   },
 }
 
+import { WhatsAppButton } from '@/components/ui/whatsapp-button'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,6 +26,7 @@ export default function RootLayout({
     <html lang="en" className="bg-background">
       <body className="font-sans antialiased">
         {children}
+        <WhatsAppButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

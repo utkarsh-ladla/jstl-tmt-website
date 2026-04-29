@@ -13,7 +13,7 @@ export default function Innovation() {
             India&apos;s First Innovation
           </h2>
           <p className="text-lg text-muted-foreground">
-            On-Site TMT Testing Units
+            Site TMT Testing Units
           </p>
         </div>
 
@@ -33,10 +33,10 @@ export default function Innovation() {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                1. On-Site TMT Testing Unit
+                1. Site TMT Testing Unit
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                We are introducing India&apos;s First On-Site TMT Testing Units — bringing lab-level verification directly to your construction site.
+                We are introducing India&apos;s First Site TMT Testing Units — bringing lab-level verification directly to your construction site.
               </p>
             </div>
 
