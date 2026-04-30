@@ -66,7 +66,7 @@ export default function ProductPortfolio() {
             return (
               <div
                 key={index}
-                className="group bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 flex flex-col"
+                className="group bg-black border border-white/20 rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 flex flex-col"
               >
                 {/* Product Image */}
                 <div className="relative h-56 w-full overflow-hidden">
@@ -77,14 +77,14 @@ export default function ProductPortfolio() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Subtle Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
 
                 <div className="p-6 flex-grow">
-                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+                  <h3 className="text-lg font-bold text-accent mb-3">
                     {product.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-white text-sm leading-relaxed">
                     {product.description}
                   </p>
                 </div>
