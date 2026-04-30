@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { submitInquiry } from '@/lib/api'
 
 interface ProjectFormData {
   companyName: string
@@ -44,19 +43,21 @@ export default function ProjectInquiry() {
     setError(null)
 
     try {
-      await submitInquiry({
-        type: 'project',
-        details: {
-          nameCompany: formData.companyName,
-          contact: formData.contact,
-          locationPin: formData.pincode,
-          quantity: formData.quantity,
-          sizes: formData.sizes,
-          timeline: formData.timeline
-        }
+      const response = await fetch('https://formspree.io/f/xbdwrezv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
       })
-      setSubmitted(true)
-      // Success state reset handled by UI conditional or timer
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        const data = await response.json()
+        throw new Error(data.error || 'Submission failed. Please try again.')
+      }
     } catch (err: any) {
       setError(err.message || 'Submission failed. Please try again.')
     } finally {

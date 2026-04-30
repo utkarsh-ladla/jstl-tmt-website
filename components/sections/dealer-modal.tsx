@@ -30,7 +30,10 @@ export default function DealerModal({ isOpen, onClose }: DealerModalProps) {
     warehouse: '',
   })
 
+
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -42,23 +45,45 @@ export default function DealerModal({ isOpen, onClose }: DealerModalProps) {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Dealer inquiry submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      onClose()
-      setFormData({
-        name: '',
-        firmName: '',
-        mobile: '',
-        city: '',
-        monthlyVolume: '',
-        currentBrands: '',
-        warehouse: '',
+    setLoading(true)
+    setError(null)
+
+    try {
+      const response = await fetch('https://formspree.io/f/xbdwrezv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
       })
-    }, 2000)
+
+      if (response.ok) {
+        setSubmitted(true)
+        setTimeout(() => {
+          setSubmitted(false)
+          onClose()
+          setFormData({
+            name: '',
+            firmName: '',
+            mobile: '',
+            city: '',
+            monthlyVolume: '',
+            currentBrands: '',
+            warehouse: '',
+          })
+        }, 2000)
+      } else {
+        const data = await response.json()
+        throw new Error(data.error || 'Submission failed. Please try again.')
+      }
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (!isOpen) return null

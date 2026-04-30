@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button'
 import Header from '@/components/sections/header'
 import Footer from '@/components/sections/footer'
 
-import { submitInquiry } from '@/lib/api'
 
 interface FormData {
   name: string
@@ -49,20 +48,22 @@ export default function BecomePartnerPage() {
     setError(null)
 
     try {
-      await submitInquiry({
-        type: 'dealer',
-        details: {
-          name: formData.name,
-          firmName: formData.firmName,
-          mobile: formData.mobile,
-          cityState: formData.city,
-          volume: formData.monthlyVolume,
-          currentBrands: formData.currentBrands,
-          warehouse: formData.warehouse
-        }
+      const response = await fetch('https://formspree.io/f/xbdwrezv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
       })
-      setSubmitted(true)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+
+      if (response.ok) {
+        setSubmitted(true)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        const data = await response.json()
+        throw new Error(data.error || 'Submission failed. Please try again.')
+      }
     } catch (err: any) {
       setError(err.message || 'Submission failed. Please try again.')
     } finally {

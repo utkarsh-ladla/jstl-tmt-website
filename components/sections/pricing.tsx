@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, CheckCircle2, Mail, Phone, User } from 'lucide-react'
-import { submitInquiry } from '@/lib/api'
 
 export default function Pricing() {
   const [formData, setFormData] = useState({
@@ -28,17 +27,21 @@ export default function Pricing() {
     setError(null)
 
     try {
-      await submitInquiry({
-        type: 'pricing',
-        details: {
-          name: formData.name,
-          email: formData.email,
-          mobile: formData.mobile,
-          pinCode: formData.pincode,
-          quantity: formData.quantity
-        }
+      const response = await fetch('https://formspree.io/f/xbdwrezv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
       })
-      setSubmitted(true)
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        const data = await response.json()
+        throw new Error(data.error || 'Submission failed. Please try again.')
+      }
     } catch (err: any) {
       setError(err.message || 'Something went wrong. Please try again.')
     } finally {
