@@ -187,7 +187,7 @@ export default function BecomePartnerPage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Site TMT Testing Advantage</span>
+                      <span className="text-sm sm:text-base">On-Site TMT Testing Advantage</span>
                     </li>
                   </ul>
                 </div>

@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="font-bold text-lg">JSTL TMT Bars</h3>
-                <p className="text-sm text-background/60">By Jindal Steel Ltd</p>
+                <p className="text-sm text-background/60">By Jindal Steel Tubes LTD</p>
               </div>
             </div>
             <p className="text-sm text-background/70 mb-6">
