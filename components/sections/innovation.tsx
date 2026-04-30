@@ -67,7 +67,7 @@ export default function Innovation() {
               <div className="absolute -inset-4 bg-accent/20 blur-2xl rounded-full opacity-50 group-hover:opacity-70 transition-opacity -z-10" />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border bg-card">
                 <img
-                  src="/innovations1.jpeg"
+                  src="/showroom.jpeg"
                   alt="JSTL Experience Centre"
                   className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                 />
@@ -118,7 +118,7 @@ export default function Innovation() {
 
         {/* Final Branding Line */}
         <div className="mt-32 text-center bg-gradient-to-br from-black to-gray-900 border border-accent/20 rounded-[2.5rem] p-12 md:p-20 shadow-3xl relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[url('/hero.jpeg')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity" />
+          <div className="absolute inset-0 bg-[url('/showroom.jpeg')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity" />
           <div className="relative z-10">
             <h3 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">
               FROM SHOWROOM <span className="text-accent">→</span> TO PROOF ROOM

@@ -5,22 +5,22 @@ export default function ProductPortfolio() {
     {
       title: 'MS & GI Pipes',
       description: 'High-quality mild steel and galvanized iron pipes for diverse industrial applications',
-      image: '/product/p5.jpeg'
+      image: '/product/MS pipes.jpeg'
     },
     {
       title: 'ERW Steel Tubes',
       description: 'Electrically Resistance Welded tubes with superior strength and durability',
-      image: '/product/p10.jpeg'
+      image: '/product/ERW pipes.jpeg'
     },
     {
       title: 'Hollow Sections',
       description: 'Square, rectangular, and round hollow sections for structural applications',
-      image: '/product/p4.jpeg'
+      image: '/product/Hollow sectional pipes.jpeg'
     },
     {
       title: 'Angles, Channels & Sections',
       description: 'Structural angles, channels, and steel sections for construction',
-      image: '/product/p1.jpeg'
+      image: '/product/MS angles.jpeg'
     },
     {
       title: 'Fabricated Components',
@@ -30,7 +30,7 @@ export default function ProductPortfolio() {
     {
       title: 'Industrial Tubing',
       description: 'High-performance tubing solutions for industrial processing and systems',
-      image: '/product/p2.jpeg'
+      image: '/product/Industrial pipes.jpeg'
     },
     {
       title: 'Profile Sheets',

@@ -9,6 +9,7 @@ import Specifications from '@/components/sections/specifications'
 import Manufacturing from '@/components/sections/manufacturing'
 import Pricing from '@/components/sections/pricing'
 import ProjectInquiry from '@/components/sections/project-inquiry'
+import FAQ from '@/components/sections/faq'
 import Footer from '@/components/sections/footer'
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <div id="project-inquiry">
         <ProjectInquiry />
       </div>
+      <FAQ />
       <Footer />
     </main>
   )

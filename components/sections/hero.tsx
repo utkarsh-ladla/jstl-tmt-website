@@ -57,7 +57,7 @@ export default function Hero() {
             {/* Hindi Tagline */}
             <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 my-4">
               <p className="text-lg italic text-foreground font-semibold">
-                "जो सच है वही टिकेगा… बाकी टेस्ट में दिखेगा।"
+                "जो सच है वही टिकेगा… बाकी Test में दिखेगा।"
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 What is true will last... the rest will be revealed in testing.
@@ -97,7 +97,7 @@ export default function Hero() {
           <div className="relative flex items-center justify-center w-full">
             <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black aspect-[16/10] md:aspect-auto">
               <img
-                src="/hero.jpeg"
+                src="/showroom.jpeg"
                 alt="JSTL TMT Bars Construction"
                 className="w-full h-full lg:h-auto object-cover lg:object-contain block"
               />

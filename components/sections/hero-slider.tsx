@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const images = [
-  '/jstl1.jpeg',
-  '/jstl2.jpeg',
-  '/jstl3.jpeg',
-  '/jstl4.jpeg',
-  '/jstl5.jpeg'
+  '/banner/banner1.jpeg',
+  '/banner/banner2.jpeg',
+  '/banner/banner3.jpeg',
+  '/banner/banner4.jpeg',
+  '/banner/banner5.jpeg'
 ]
 
 export default function HeroSlider() {
