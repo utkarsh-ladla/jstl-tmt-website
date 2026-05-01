@@ -88,7 +88,7 @@ export default function Header() {
               <a href="/" className="flex items-center group">
                 <div className="relative overflow-hidden rounded-lg">
                   <img
-                    src="/logo6.jpeg"
+                    src="/logo4.png"
                     alt="JSTL Logo"
                     className="h-12 md:h-14 lg:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   />
