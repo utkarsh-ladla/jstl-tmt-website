@@ -71,7 +71,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href={isHomePage ? "#legacy" : "/#legacy"} className="text-background/70 hover:text-background transition">
-                  Our Legacy
+                  Our Heritage
                 </Link>
               </li>
               <li>
@@ -152,7 +152,7 @@ export default function Footer() {
               <p className="text-xs text-background/60">IS 1786:2008 Compliant</p>
             </div>
             <div className="text-center">
-              <p className="text-sm font-semibold mb-1 text-background">5 States</p>
+              <p className="text-sm font-semibold mb-1 text-background">8 States</p>
               <p className="text-xs text-background/60">Manufacturing Network</p>
             </div>
             <div className="text-center md:text-right">

@@ -14,7 +14,7 @@ export default function Header() {
   const isHomePage = pathname === '/'
 
   const navItems = [
-    { label: 'Legacy', href: '#legacy' },
+    { label: 'Heritage', href: '#legacy' },
     { label: 'Products', href: '#products' },
     { label: 'TMT Bars', href: '#tmt' },
     { label: 'Specifications', href: '#specs' },
@@ -58,7 +58,7 @@ export default function Header() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!isHomePage) return // Allow default link behavior to navigate to home page
     e.preventDefault()
-    
+
     // Close mobile menu first so it doesn't interfere with position calculations
     setIsOpen(false)
 
@@ -88,7 +88,7 @@ export default function Header() {
               <a href="/" className="flex items-center group">
                 <div className="relative overflow-hidden rounded-lg">
                   <img
-                    src="/logo4.png"
+                    src="/logo6.jpeg"
                     alt="JSTL Logo"
                     className="h-12 md:h-14 lg:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   />

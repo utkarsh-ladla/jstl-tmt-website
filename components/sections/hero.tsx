@@ -30,37 +30,57 @@ export default function Hero() {
           {/* Left Content */}
           <div className="flex flex-col gap-6">
             <div className="space-y-1">
-              <h2 className="text-sm md:text-base font-bold text-accent tracking-wider uppercase">
-                INDIA&apos;S FIRST TESTED TMT BUYING SYSTEM
-              </h2>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-foreground leading-tight tracking-tight">
                 JSTL TMT BARS
               </h1>
-            </div>
-            <div className="space-y-2">
-              <p className="text-lg md:text-xl font-medium text-muted-foreground flex items-center gap-2">
-                A Product of <span className="text-foreground font-bold">Jindal Steel Tubes Limited</span>
-              </p>
-              <p className="text-sm md:text-base text-muted-foreground">
-                Powered by <span className="text-accent font-semibold">Khyati Infra Mart</span>
+              <p className="text-xl md:text-2xl font-bold text-accent">
+                A Product of Jindal Steel Tubes Ltd.
               </p>
             </div>
-            <div className="space-y-1 mt-2">
-              <p className="text-lg font-bold text-foreground">
-                Experience Centre + Live Testing = Verified Steel
+            
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-foreground tracking-tight">
+                Strength You Can Trust. Quality You Can See.
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Engineered for durability and manufactured under strict quality systems with <span className="text-foreground font-bold">ISI Mark certification</span>, JSTL TMT Bars are built to deliver consistent strength for every structure.
               </p>
-              <p className="text-md text-muted-foreground">
-                Not a Store. A New Way to Buy Steel.
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+              <div className="space-y-2">
+                <h3 className="font-bold text-foreground flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-accent rounded-full" />
+                  First Time in India – On-Site TMT Testing
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Quality you don&apos;t just believe in—you verify it at your construction site in real time.
+                </p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-bold text-foreground flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-accent rounded-full" />
+                  Brand Store – A New Way to Buy Steel
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Moving beyond traditional dealer dependency, JSTL introduces exclusive brand stores for transparent pricing, assured quality, and direct trust.
+                </p>
+              </div>
+            </div>
+
+            <div className="py-4 border-y border-border/50">
+              <p className="text-lg font-bold text-foreground text-center md:text-left">
+                No middle confusion. No compromise. Only certified strength.
+              </p>
+              <p className="text-2xl font-black text-accent mt-2 text-center md:text-left tracking-tighter">
+                BUILD STRONG. BUILD SMART. BUILD JSTL.
               </p>
             </div>
 
             {/* Hindi Tagline */}
-            <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 my-4">
+            <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
               <p className="text-lg italic text-foreground font-semibold">
-                "जो सच है वही टिकेगा… बाकी Test में दिखेगा।"
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                What is true will last... the rest will be revealed in testing.
+                &quot;जो सच है वही टिकेगा… बाकी Test में दिखेगा।&quot;
               </p>
             </div>
 

@@ -5,7 +5,10 @@ export default function Manufacturing() {
     { state: 'Uttar Pradesh', region: 'Northern India' },
     { state: 'Madhya Pradesh', region: 'Central India' },
     { state: 'Maharashtra', region: 'Western India' },
+    { state: 'Gujarat', region: 'Western India' },
+    { state: 'Telangana', region: 'Southern India' },
     { state: 'Chhattisgarh', region: 'Central-Eastern India' },
+    { state: 'Bihar', region: 'Eastern India' },
     { state: 'Jharkhand', region: 'Eastern India' },
   ]
 
@@ -21,12 +24,12 @@ export default function Manufacturing() {
             Built Across India. Controlled by Process.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Manufactured through a growing network across five key industrial states
+            Manufactured through a growing network across eight key industrial states
           </p>
         </div>
 
         {/* Facilities Map */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-12">
           {facilities.map((facility, index) => (
             <div
               key={index}
@@ -78,7 +81,7 @@ export default function Manufacturing() {
         <div className="bg-black text-white rounded-2xl p-10 relative overflow-hidden">
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="text-center">
-              <p className="text-5xl font-black text-accent mb-2">5</p>
+              <p className="text-5xl font-black text-accent mb-2">8</p>
               <p className="text-white font-bold uppercase tracking-wider">States</p>
               <p className="text-sm text-gray-400">Production Network</p>
             </div>

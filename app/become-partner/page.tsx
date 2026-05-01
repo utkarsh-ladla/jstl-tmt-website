@@ -67,22 +67,22 @@ export default function BecomePartnerPage() {
 
   const benefits = [
     {
-      icon: <Shield className="w-8 h-8 text-accent" />,
+      icon: <Shield className="w-8 h-8 text-black" />,
       title: "Premium Brand Legacy",
       description: "Partner with JSTL, a name synonymous with strength and trust in India's steel industry."
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-accent" />,
+      icon: <TrendingUp className="w-8 h-8 text-black" />,
       title: "Growth Opportunities",
       description: "Benefit from our expanding distribution network and high-demand premium TMT bars."
     },
     {
-      icon: <Users className="w-8 h-8 text-accent" />,
+      icon: <Users className="w-8 h-8 text-black" />,
       title: "Full Marketing Support",
       description: "Get end-to-end support for brand stores, signage, and digital marketing activation."
     },
     {
-      icon: <CheckCircle2 className="w-8 h-8 text-accent" />,
+      icon: <CheckCircle2 className="w-8 h-8 text-black" />,
       title: "Quality Assurance",
       description: "Offer your customers Fe 550D & UHD 550 grade bars with ISO and BIS certifications."
     }
@@ -155,10 +155,10 @@ export default function BecomePartnerPage() {
                 <h2 className="text-3xl font-bold text-foreground mb-6">Why Partner With Us?</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6">
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="p-5 sm:p-6 rounded-2xl bg-accent/5 border border-accent/10 hover:border-accent/30 transition-all duration-300">
+                    <div key={index} className="p-5 sm:p-6 rounded-2xl bg-accent border border-accent/10 hover:border-accent/30 transition-all duration-300 shadow-lg shadow-accent/10">
                       <div className="mb-4">{benefit.icon}</div>
-                      <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
+                      <h3 className="text-xl font-bold mb-2 text-black">{benefit.title}</h3>
+                      <p className="text-black/80 text-sm font-medium leading-relaxed">{benefit.description}</p>
                     </div>
                   ))}
                 </div>

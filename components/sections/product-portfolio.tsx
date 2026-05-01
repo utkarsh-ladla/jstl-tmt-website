@@ -35,7 +35,7 @@ export default function ProductPortfolio() {
     {
       title: 'Profile Sheets',
       description: 'Durable and aesthetic profile sheets for roofing and cladding',
-      image: '/product/p7.jpeg'
+      image: '/profilesheet.jpeg'
     },
     {
       title: 'Custom Steel Solutions',

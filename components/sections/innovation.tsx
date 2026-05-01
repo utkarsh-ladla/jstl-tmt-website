@@ -21,10 +21,10 @@ export default function Innovation() {
           <div className="space-y-12">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                1. On-Site TMT Testing Unit
+                1. First Time in India – On-Site TMT Testing
               </h3>
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-4xl">
-                We are introducing India&apos;s First On-Site TMT Testing Units — bringing lab-level verification directly to your construction site. No more assumptions, only tested steel for your home.
+                Quality you don&apos;t just believe in—you verify it at your construction site in real time. Our on-site testing units bring lab-level verification directly to you.
               </p>
             </div>
 
@@ -40,22 +40,22 @@ export default function Innovation() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl">
-              <div className="flex gap-4 p-5 bg-card border border-border rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex gap-4 p-5 bg-black border border-white/10 rounded-2xl shadow-sm hover:border-accent/50 transition-all">
                 <div className="flex-shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-accent flex">
                   <Beaker className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1 text-lg">No Assumptions</h4>
-                  <p className="text-sm text-muted-foreground">Direct site verification</p>
+                  <h4 className="font-bold text-white mb-1 text-lg">No Assumptions</h4>
+                  <p className="text-sm text-white/60">Direct site verification</p>
                 </div>
               </div>
-              <div className="flex gap-4 p-5 bg-card border border-border rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex gap-4 p-5 bg-black border border-white/10 rounded-2xl shadow-sm hover:border-accent/50 transition-all">
                 <div className="flex-shrink-0 h-12 w-12 items-center justify-center rounded-xl bg-accent flex">
                   <CheckCircle2 className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1 text-lg">No Middle Layers</h4>
-                  <p className="text-sm text-muted-foreground">Transparent quality</p>
+                  <h4 className="font-bold text-white mb-1 text-lg">No Middle Layers</h4>
+                  <p className="text-sm text-white/60">Transparent quality</p>
                 </div>
               </div>
             </div>
@@ -78,15 +78,15 @@ export default function Innovation() {
             <div className="order-1 lg:order-2 space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  2. Experience Centres
+                  2. Brand Store – A New Way to Buy Steel
                 </h3>
                 <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-                  Our dedicated brand experience centres ensure that before you buy, you see the product, understand the quality, and verify the claims in a controlled environment.
+                  Moving beyond traditional dealer dependency, JSTL introduces exclusive brand stores for transparent pricing, assured quality, and direct trust.
                 </p>
               </div>
 
-              <div className="bg-accent/5 border border-accent/20 rounded-2xl p-8 hover:bg-accent/10 transition-colors">
-                <h4 className="font-bold text-foreground mb-6 text-2xl">What Makes This Different?</h4>
+              <div className="bg-black border border-white/10 rounded-2xl p-8 hover:border-accent/40 transition-colors">
+                <h4 className="font-bold text-white mb-6 text-2xl">What Makes This Different?</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
                   {[
                     "Single Brand Environment",
@@ -98,7 +98,7 @@ export default function Innovation() {
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-accent" />
-                      <span className="text-sm md:text-base font-semibold text-foreground/80">{item}</span>
+                      <span className="text-sm md:text-base font-semibold text-white/80">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -106,8 +106,8 @@ export default function Innovation() {
 
               <div className="p-6 bg-black text-white rounded-2xl border border-accent/30 shadow-xl relative overflow-hidden">
                 <div className="relative z-10">
-                  <p className="text-accent font-black text-xl mb-1 italic uppercase">This is not a dealer shop.</p>
-                  <p className="text-white/80 font-medium">This is a controlled brand environment built for trust.</p>
+                  <p className="text-accent font-black text-xl mb-1 italic uppercase">No middle confusion. No compromise.</p>
+                  <p className="text-white/80 font-medium">Only certified strength. A controlled brand environment built for trust.</p>
                 </div>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               </div>

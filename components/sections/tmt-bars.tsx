@@ -39,12 +39,12 @@ export default function TMTBars() {
                 {grades.map((grade, index) => (
                   <div
                     key={index}
-                    className="bg-card border border-border rounded-lg p-4 hover:border-accent/30 transition"
+                    className="bg-black border border-white/10 rounded-lg p-4 hover:border-accent/50 transition"
                   >
                     <h4 className="text-lg font-semibold text-accent mb-1">
                       {grade.name}
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-white/70">
                       {grade.description}
                     </p>
                   </div>
@@ -86,7 +86,7 @@ export default function TMTBars() {
             </div>
 
             {/* Quality Badge */}
-            <div className="mt-8 bg-gradient-to-r from-accent/15 to-background border border-accent/40 rounded-lg p-6">
+            <div className="mt-8 bg-accent border border-accent/40 rounded-lg p-6">
               <p className="text-sm font-semibold text-black mb-2">BIS CERTIFIED</p>
               <p className="text-foreground font-semibold">
                 Fully compliant with IS 1786:2008

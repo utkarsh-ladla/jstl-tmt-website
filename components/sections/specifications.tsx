@@ -52,8 +52,8 @@ export default function Specifications() {
           <button
             onClick={() => setActiveTab('chemical')}
             className={`px-4 py-3 font-semibold text-sm transition border-b-2 whitespace-nowrap ${activeTab === 'chemical'
-                ? 'text-accent border-accent'
-                : 'text-muted-foreground border-transparent hover:text-foreground'
+              ? 'text-accent border-accent'
+              : 'text-muted-foreground border-transparent hover:text-foreground'
               }`}
           >
             Chemical Properties
@@ -61,8 +61,8 @@ export default function Specifications() {
           <button
             onClick={() => setActiveTab('mechanical')}
             className={`px-4 py-3 font-semibold text-sm transition border-b-2 whitespace-nowrap ${activeTab === 'mechanical'
-                ? 'text-accent border-accent'
-                : 'text-muted-foreground border-transparent hover:text-foreground'
+              ? 'text-accent border-accent'
+              : 'text-muted-foreground border-transparent hover:text-foreground'
               }`}
           >
             Mechanical Properties
@@ -70,8 +70,8 @@ export default function Specifications() {
           <button
             onClick={() => setActiveTab('weight')}
             className={`px-4 py-3 font-semibold text-sm transition border-b-2 whitespace-nowrap ${activeTab === 'weight'
-                ? 'text-accent border-accent'
-                : 'text-muted-foreground border-transparent hover:text-foreground'
+              ? 'text-accent border-accent'
+              : 'text-muted-foreground border-transparent hover:text-foreground'
               }`}
           >
             Weight & Length
@@ -132,7 +132,7 @@ export default function Specifications() {
               <div className="max-w-4xl">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Standard Weight & Length</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  At JSTL, every TMT bar is manufactured and supplied in strict accordance with BIS Standard IS 1786, 
+                  At JSTL, every TMT bar is manufactured and supplied in strict accordance with BIS Standard IS 1786,
                   ensuring precise weight, consistent strength, and dependable structural performance for every construction project.
                 </p>
               </div>
