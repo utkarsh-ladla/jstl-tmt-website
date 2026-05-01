@@ -129,7 +129,7 @@ export default function DealerInquiry() {
                   value={formData.mobile}
                   onChange={handleChange}
                   required
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 87961 85073"
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
                 />
               </div>
