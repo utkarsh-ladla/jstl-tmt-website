@@ -115,11 +115,11 @@ export default function Hero() {
 
           {/* Right Visual */}
           <div className="relative flex items-center justify-center w-full">
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black aspect-[16/10] md:aspect-auto">
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black">
               <img
                 src="/showroom.jpeg"
                 alt="JSTL TMT Bars Construction"
-                className="w-full h-full lg:h-auto object-cover lg:object-contain block"
+                className="w-full h-auto block"
               />
             </div>
           </div>
