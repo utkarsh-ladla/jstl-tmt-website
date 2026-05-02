@@ -1,6 +1,6 @@
 'use client'
 
-import { MapPin, Mail, Phone, Facebook, Instagram } from 'lucide-react'
+import { MapPin, Mail, Phone, Facebook, Instagram, Youtube } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
@@ -46,6 +46,22 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://youtube.com/@jstljindal?si=JSNRnP1nbsbsQtOM" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a 
+                href="mailto:sales.jstljindal@gmail.com" 
+                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
               </a>
               <a 
                 href="https://wa.me/918796185073" 
@@ -110,7 +126,7 @@ export default function Footer() {
               </div>
               <div className="flex gap-2 items-center">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:sales@jstltmt.com" className="text-background/70 hover:text-background transition">
+                <a href="mailto:sales.jstljindal@gmail.com" className="text-background/70 hover:text-background transition">
                   sales.jstljindal@gmail.com
                 </a>
               </div>

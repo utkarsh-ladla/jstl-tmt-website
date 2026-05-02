@@ -30,7 +30,7 @@ export default function HeroSlider() {
   }
 
   return (
-    <section className="relative w-full h-[300px] sm:h-[450px] md:h-[550px] lg:h-[650px] overflow-hidden group bg-gray-900">
+    <section className="relative w-full h-[300px] sm:h-[450px] md:h-[550px] lg:h-[650px] overflow-hidden group bg-black">
       {/* Slider Images */}
       {images.map((src, index) => (
         <div
@@ -43,7 +43,7 @@ export default function HeroSlider() {
           <img
             src={src}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       ))}
