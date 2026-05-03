@@ -1,7 +1,8 @@
 'use client'
+// Triggering rebuild to fix potential routing issues
 
-import { useState } from 'react'
-import { ArrowRight, CheckCircle2, Shield, TrendingUp, Users } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { ArrowRight, CheckCircle2, Shield, TrendingUp, Users, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Header from '@/components/sections/header'
 import Footer from '@/components/sections/footer'
@@ -27,6 +28,26 @@ export default function BecomePartnerPage() {
     currentBrands: '',
     warehouse: '',
   })
+
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
+  const partnerSlides = ['/partner1.jpeg', '/partner2.jpeg']
+
+  useEffect(() => {
+    if (isHovered) return
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % partnerSlides.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [isHovered])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % partnerSlides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + partnerSlides.length) % partnerSlides.length)
+  }
 
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -128,18 +149,67 @@ export default function BecomePartnerPage() {
               </div>
             </div>
 
-            {/* Hero Visual - The Poster */}
-            <div className="relative mt-12 lg:mt-0">
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(234,179,8,0.3)] border border-accent/20 group max-w-md mx-auto lg:max-w-none">
-                <img
-                  src="/hero2.jpeg"
-                  alt="JSTL Distribution Model"
-                  className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            {/* Hero Visual - Partner Posters Slider */}
+            <div 
+              className="relative mt-12 lg:mt-0 group"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <div className="relative z-10 w-full max-w-md mx-auto lg:max-w-none aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(234,179,8,0.3)] border border-accent/20 bg-black">
+                {partnerSlides.map((slide, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+                      index === currentSlide 
+                        ? 'opacity-100 scale-100' 
+                        : 'opacity-0 scale-105 pointer-events-none'
+                    }`}
+                  >
+                    <img
+                      src={slide}
+                      alt={`JSTL Brand Store Partnership ${index + 1}`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ))}
+
+                {/* Slider Overlay for arrows */}
+                <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                  <button
+                    onClick={prevSlide}
+                    className="p-2 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 hover:bg-accent hover:text-accent-foreground transition-all"
+                    aria-label="Previous slide"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="p-2 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 hover:bg-accent hover:text-accent-foreground transition-all"
+                    aria-label="Next slide"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </div>
+
+                {/* Pagination Dots */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                  {partnerSlides.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`h-1.5 rounded-full transition-all duration-500 ${
+                        index === currentSlide
+                          ? 'bg-accent w-8 shadow-[0_0_10px_rgba(234,179,8,0.5)]'
+                          : 'bg-white/30 w-2 hover:bg-white/50'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
+              
               {/* Decorative Glow */}
-              <div className="absolute -inset-4 bg-accent/20 blur-3xl rounded-full opacity-50 -z-10" />
+              <div className="absolute -inset-4 bg-accent/20 blur-3xl rounded-full opacity-50 -z-10 animate-pulse" />
             </div>
           </div>
         </div>
