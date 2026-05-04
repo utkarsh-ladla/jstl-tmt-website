@@ -238,8 +238,8 @@ export default function BecomePartnerPage() {
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-4">Investment Model</h3>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 mb-6">
-                    <span className="text-3xl sm:text-4xl font-extrabold text-accent">₹25 LAKH</span>
-                    <span className="text-gray-400">inventory investment</span>
+                    <span className="text-3xl sm:text-4xl font-extrabold text-accent uppercase">50 Metric Ton</span>
+                    <span className="text-gray-400">Stock Investment</span>
                   </div>
                   <ul className="space-y-4 text-gray-300">
                     <li className="flex items-start gap-3">
@@ -248,7 +248,7 @@ export default function BecomePartnerPage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Complete Steel & Building Materials Display</span>
+                      <span className="text-sm sm:text-base">Complete TMT and Structural Steel Products Display of JSTL Brands and DS Jindal Group Products</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />

@@ -22,11 +22,7 @@ export default function ProductPortfolio() {
       description: 'Structural angles, channels, and steel sections for construction',
       image: '/product/MS angles.jpeg'
     },
-    {
-      title: 'Fabricated Components',
-      description: 'Custom fabricated steel components engineered to your specifications',
-      image: '/product/p13.jpeg'
-    },
+
     {
       title: 'Industrial Tubing',
       description: 'High-performance tubing solutions for industrial processing and systems',
@@ -37,11 +33,7 @@ export default function ProductPortfolio() {
       description: 'Durable and aesthetic profile sheets for roofing and cladding',
       image: '/profilesheet.jpeg'
     },
-    {
-      title: 'Custom Steel Solutions',
-      description: 'Tailored steel solutions for unique industrial and construction needs',
-      image: '/product/p14.jpeg'
-    },
+
   ]
 
   return (
@@ -61,7 +53,7 @@ export default function ProductPortfolio() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {productCategories.map((product, index) => {
             return (
               <div
@@ -99,7 +91,7 @@ export default function ProductPortfolio() {
             Complete Coverage Across Sectors
           </p>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Whether you need pipes for industrial applications, tubes for structural work, or custom fabricated components, our complete product portfolio ensures you find exactly what you need for your next big project.
+            Whether you need pipes for industrial applications, tubes for structural work, or high-performance industrial tubing, our complete product portfolio ensures you find exactly what you need for your next big project.
           </p>
         </div>
       </div>

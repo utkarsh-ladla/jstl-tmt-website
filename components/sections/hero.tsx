@@ -29,13 +29,18 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="flex flex-col gap-6">
-            <div className="space-y-1">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-foreground leading-tight tracking-tight">
-                JSTL TMT BARS
-              </h1>
-              <p className="text-xl md:text-2xl font-bold text-accent">
-                A Product of Jindal Steel Tubes Ltd.
-              </p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 sm:gap-4 md:gap-6 flex-nowrap">
+                <img src="/logo5.png" alt="J Glob Logo" className="h-10 sm:h-14 lg:h-20 w-auto object-contain flex-shrink-0" />
+                <h1 className="text-[28px] sm:text-5xl lg:text-7xl font-black text-foreground leading-none tracking-tighter whitespace-nowrap">
+                  JSTL TMT BARS
+                </h1>
+              </div>
+              <div className="inline-block bg-accent px-4 py-2 rounded-lg shadow-sm">
+                <p className="text-xl md:text-2xl font-bold text-white">
+                  A Product of Jindal Steel Tubes Ltd.
+                </p>
+              </div>
             </div>
             
             <div className="space-y-4">

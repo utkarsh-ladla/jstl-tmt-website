@@ -233,8 +233,11 @@ export default function Specifications() {
                       </li>
                     </ul>
                   </div>
-                  <div className="text-center md:text-right">
-                    <p className="text-3xl font-black tracking-tighter">JSTL TMT</p>
+                  <div className="flex flex-col items-center md:items-end gap-2">
+                    <div className="flex items-center gap-3">
+                      <img src="/logo5.png" alt="J Glob Logo" className="h-10 w-auto object-contain" />
+                      <p className="text-3xl font-black tracking-tighter">JSTL TMT</p>
+                    </div>
                     <p className="text-accent font-bold italic">Build What Truly Lasts.</p>
                   </div>
                 </div>
@@ -245,26 +248,26 @@ export default function Specifications() {
 
         {/* Original Compliance Banner - Only show for Chemical/Mechanical */}
         {(activeTab === 'chemical' || activeTab === 'mechanical') && (
-          <div className="mt-12 bg-gradient-to-r from-accent/15 to-background border border-accent/40 rounded-xl p-8">
-            <h3 className="text-xl font-bold text-foreground mb-4">
+          <div className="mt-12 bg-accent border border-accent/40 rounded-xl p-8 shadow-lg">
+            <h3 className="text-xl font-bold text-white mb-4">
               Why BIS Certification Matters
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <p className="text-sm font-semibold text-black mb-2">Quality Guarantee</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm font-bold text-white mb-2">Quality Guarantee</p>
+                <p className="text-sm text-white/90">
                   BIS standards ensure consistent quality across all production batches
                 </p>
               </div>
               <div>
-                <p className="text-sm font-semibold text-black mb-2">Safety Assurance</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm font-bold text-white mb-2">Safety Assurance</p>
+                <p className="text-sm text-white/90">
                   Meets all structural safety requirements for Indian construction codes
                 </p>
               </div>
               <div>
-                <p className="text-sm font-semibold text-black mb-2">Market Trust</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm font-bold text-white mb-2">Market Trust</p>
+                <p className="text-sm text-white/90">
                   Recognized and accepted by all major infrastructure and construction projects
                 </p>
               </div>
