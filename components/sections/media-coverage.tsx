@@ -6,36 +6,63 @@ import Image from "next/image"
 
 const articles = [
   {
-    title: "JSTL TMT Bars Redefining Construction Strength with Superior Ductility",
-    source: "Steel Insider",
-    date: "April 2024",
-    link: "#"
+    title: "JSTL Enters TMT Segment with a New Industry-First Approach",
+    source: "Hindustan Metro",
+    date: "",
+    link: "https://hindustanmetro.com/jindal-steel-tubes-ltd-enters-tmt-bars-segment-in-collaboration-with-khyati-infra-mart-khyati-contech-pvt-ltd-under-the-brand-jstl-tmt-bars"
   },
   {
-    title: "How Jindal Steel Tubes Ltd is Leading the Way in On-Site TMT Testing",
-    source: "Construction Week",
-    date: "March 2024",
-    link: "#"
+    title: "Jindal Steel Tubes Partners with Khyati Infra Mart to Launch JSTL TMT Bars",
+    source: "UP18 News",
+    date: "",
+    link: "https://up18news.com/jindal-steel-tubes-ltd-enters-tmt-bars-segment-in-collaboration-with-khyati-infra-mart-khyati-contech-pvt-ltd-under-the-brand-jstl-tmt-bars/"
   },
   {
-    title: "JSTL TMT: A Legacy of 50 Years in Building a Stronger India",
-    source: "Business Standard",
-    date: "February 2024",
-    link: "#"
+    title: "JSTL Introduces Transparent & Process-Driven TMT Distribution Model",
+    source: "Loktej English",
+    date: "",
+    link: "https://english.loktej.com/article/26279/jindal-steel-tubes-ltd-enters-tmt-bars-segment-in-collaboration-with-khyati-infra-mart--khyati-contech-pvt-ltd--under-the-brand-jstl-tmt-bars"
   },
   {
-    title: "The Science Behind JSTL TMT's Earthquake-Resistant HYQST Technology",
-    source: "Tech Engineering",
-    date: "January 2024",
-    link: "#"
+    title: "JSTL Expands into TMT Bars with Focus on Quality, Testing & Trust",
+    source: "Dailyhunt",
+    date: "",
+    link: "https://m.dailyhunt.in/news/india/english/loktej+english-epaper-loktejen/jindal+steel+tubes+ltd+enters+tmt+bars+segment+in+collaboration+with+khyati+infra+mart+khyati+contech+pvt+ltd+under+the+brand+jstl+tmt+bars-newsid-n711014743"
   },
-  {
-    title: "JSTL TMT Expands its Footprint with Exclusive Brand Stores Across North India",
-    source: "Economic Times (Retail)",
-    date: "December 2023",
-    link: "#"
-  }
-]
+ 
+];
+// const articles = [
+//   {
+//     title: "JSTL TMT Bars Redefining Construction Strength with Superior Ductility",
+//     source: "Steel Insider",
+//     date: "April 2024",
+//     link: "#"
+//   },
+//   {
+//     title: "How Jindal Steel Tubes Ltd is Leading the Way in On-Site TMT Testing",
+//     source: "Construction Week",
+//     date: "March 2024",
+//     link: "#"
+//   },
+//   {
+//     title: "JSTL TMT: A Legacy of 50 Years in Building a Stronger India",
+//     source: "Business Standard",
+//     date: "February 2024",
+//     link: "#"
+//   },
+//   {
+//     title: "The Science Behind JSTL TMT's Earthquake-Resistant HYQST Technology",
+//     source: "Tech Engineering",
+//     date: "January 2024",
+//     link: "#"
+//   },
+//   {
+//     title: "JSTL TMT Expands its Footprint with Exclusive Brand Stores Across North India",
+//     source: "Economic Times (Retail)",
+//     date: "December 2023",
+//     link: "#"
+//   }
+// ]
 
 export default function MediaCoverage() {
   return (
